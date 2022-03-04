@@ -68,6 +68,4 @@ def sendLogEmail(k, recid='adityaarghya0@gmail.com'):
 	MESSAGE.attach(HTML_BODY)
 	s.sendmail(senderacc, recid, MESSAGE.as_string())
 	s.quit()
-© 2022 GitHub, Inc.
-Terms
-Privacy
+
