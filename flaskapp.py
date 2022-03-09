@@ -23,8 +23,8 @@ import os
 import uuid
 import re
 
-url="medical-record.centralindia.cloudapp.azure.com"
-filepth='/home/vm_user/payrecords/'
+url=""
+filepth=''
 regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
 
 createAllTables()
@@ -32,7 +32,7 @@ createContainers()
 
 app = Flask(__name__, static_url_path="")
 
-if not path.exists(filepth+'appfiles/'+'medrecseckey.pkl'):
+if not path.exists(filepth+'appfiles/'+'.pkl'):
 	outp3=open(filepth+'appfiles/'+'medrecseckey.pkl','wb')
 	pickle.dump(os.urandom(32),outp3,pickle.HIGHEST_PROTOCOL)
 	outp3.close()
